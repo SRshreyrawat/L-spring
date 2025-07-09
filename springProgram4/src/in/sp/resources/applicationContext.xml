@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    
+    <context:component-scan base-package="in.sp.beans" />
+
+</beans>
+<!-- 
+        => In a Spring XML configuration file, <context:component-scan> is used to instruct the 
+           Spring framework to perform component scanning.
+
+        => It scans the specified package (here, "in.sp.beans") for any classes annotated with:
+           - @Component
+           - @Service
+           - @Repository
+           - @Controller
+
+        => These classes are then automatically registered as Spring beans, allowing:
+           - Dependency Injection (DI)
+           - Auto-wiring of dependencies
+           - Other Spring features without manually declaring <bean> elements
+    -->
