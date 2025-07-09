@@ -1,0 +1,40 @@
+# =============================
+# Eclipse & Java Project Ignore
+# =============================
+
+# Eclipse settings
+.metadata/
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# Eclipse project files
+*.classpath
+*.project
+.settings/
+
+# Java build output
+bin/
+target/
+out/
+
+# Logs and temporary files
+*.log
+*.war
+*.ear
+*.iml
+
+# Maven/Gradle build
+.mvn/
+build/
+.gradle/
+
+# VS Code or IntelliJ (optional)
+.vscode/
+.idea/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
