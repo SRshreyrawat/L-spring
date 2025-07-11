@@ -1,69 +1,33 @@
- Spring Setter-Based Dependency Injection using Java Configuration
+Dependency Injection with Java Config and Constructor Injection (Spring)
+This project demonstrates Constructor-Based Dependency Injection using Java-based configuration (@Configuration, @Bean) in the Spring Framework.
 
-This project demonstrates how to use **Spring Framework's Java-based configuration** to implement **Setter-based Dependency Injection (DI)** in a simple Java application.
+🧩 Technologies Used
+Java
 
-## 📁 Project Structure
+Spring Core (Java Config - @Configuration)
 
-in.sp.beans
-├── Student.java
-├── Address.java
+Eclipse/IntelliJ (Optional)
 
-in.sp.resources
-└── SpringConfigFile.java # Java-based Spring configuration using @Configuration and @Bean
+📁 Project Structure
 
-in.sp.main
-└── Main.java # Entry point of the application
+in.sp.main         → Main class to run the application  
+in.sp.beans        → POJOs: Student and Address  
+in.sp.resources    → Spring configuration using @Configuration and @Bean  
+🚀 How It Works
+Spring container is created using AnnotationConfigApplicationContext.
 
+Dependencies (Address) are injected into Student via constructor.
 
----
+The config file (SpringConfigFile) manually defines beans using @Bean methods.
 
-## ✅ Technologies Used
+▶️ Running the App
 
-- Java 8+
-- Spring Framework (Core Container)
-- No XML Configuration (JavaConfig only)
+Run Main.java
+It prints the student's name, roll number, and address via Spring-managed beans.
 
----
+📚 Learning Focus
+Spring Java-based Configuration
 
-## 🧠 Concepts Demonstrated
+Constructor Injection
 
-- `@Configuration` and `@Bean` annotations
-- Manual Java-based bean creation
-- Setter-based dependency injection
-- Spring container using `AnnotationConfigApplicationContext`
-
----
-
-## 💡 How it Works
-
-1. **Student** and **Address** are two simple Java classes (POJOs).
-2. Dependencies are injected manually via setter methods.
-3. A Spring configuration class (`SpringConfigFile`) is annotated with `@Configuration` and declares beans using `@Bean`.
-4. The `Main` class loads the context using `AnnotationConfigApplicationContext` and retrieves the `Student` bean.
-5. The `display()` method prints the injected details.
-
----
-
-## 🧪 Sample Output
-
-Alok
-50
-100-Delhi123456
-
-
-
-## 🚀 Running the Application
-
-1. Open the project in Eclipse or any Java IDE.
-2. Make sure Spring Core is added to your classpath.
-3. Run the `Main.java` file.
-
----
-
-## 📌 Notes
-
-- This example uses **setter injection**. You can switch to **constructor injection** or **@Autowired** if needed.
-- This is a minimal Spring project meant for learning core concepts without Spring Boot.
-
----
-
+Manual bean wiring using @Bean
